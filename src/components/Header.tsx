@@ -46,11 +46,11 @@ export default function Header() {
         
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-50">
+          <div className="md:hidden fixed inset-0 z-50 h-screen" style={{ height: '100dvh' }}>
             {/* Blurred Background Overlay */}
-            <div className="absolute inset-0 backdrop-blur-[16px] bg-[rgba(27,28,28,0.95)]" />
+            <div className="absolute inset-0 backdrop-blur-[16px] bg-[rgba(27,28,28,0.95)] h-full" style={{ height: '100dvh' }} />
             
-            <div className="relative flex flex-col h-full">
+            <div className="relative flex flex-col h-full" style={{ height: '100dvh' }}>
               {/* Header with Logo and Close Button */}
               <div className="flex justify-between items-center p-5 pt-8">
                 <Image 
@@ -71,11 +71,11 @@ export default function Header() {
               
               {/* Navigation Menu - Centered */}
               <nav className="flex-1 flex items-center justify-center">
-                <ul className="text-center space-y-8">
+                <ul className="text-center space-y-7">
                   <li>
                     <a 
                       href="#about" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[60px] leading-[111px] font-['Baskerville'] font-semibold block" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About
@@ -84,7 +84,7 @@ export default function Header() {
                   <li>
                     <a 
                       href="#videos" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[60px] leading-[111px] font-['Baskerville'] font-semibold block" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Videos
@@ -93,7 +93,7 @@ export default function Header() {
                   <li>
                     <a 
                       href="#music" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[60px] leading-[111px] font-['Baskerville'] font-semibold block" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Music
@@ -102,7 +102,7 @@ export default function Header() {
                   <li>
                     <a 
                       href="#partners" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[60px] leading-[111px] font-['Baskerville'] font-semibold block" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Partners
@@ -111,7 +111,7 @@ export default function Header() {
                   <li>
                     <a 
                       href="#donate" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[60px] leading-[111px] font-['Baskerville'] font-semibold block" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Donate
