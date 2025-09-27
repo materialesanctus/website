@@ -16,10 +16,10 @@ export default function Home() {
       <HeroSection />
       <StorySection />
       <ValuesSection />
+      <DonateSection />
       <VideoSection />
       <MusicSection />
       <GetInvolvedSection />
-      <DonateSection />
       <PartnersSection />
       <Footer />
     </main>

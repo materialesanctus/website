@@ -11,7 +11,7 @@ export default function VideoSection() {
       <div className="absolute inset-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/hero-image-4.png')" }}
+          style={{ backgroundImage: "url('/assets/video-image.png')" }}
         />
         <div className="absolute inset-0 bg-[#171718] bg-opacity-60" />
       </div>
