@@ -1,3 +1,5 @@
+
+
 # Sanctus Pro Deo Website
 
 A modern Next.js website for the Christian music group Sanctus Pro Deo, converted from the original HTML/CSS/JS implementation.
