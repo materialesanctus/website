@@ -1,0 +1,7 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="25" cy="25" r="25" fill="#231F20"/>
+  <path d="M15 20C15 15 20 10 25 10C30 10 35 15 35 20C35 25 30 30 25 30C20 30 15 25 15 20Z" fill="#F0F0F0"/>
+  <path d="M20 25C20 22 22 20 25 20C28 20 30 22 30 25C30 28 28 30 25 30C22 30 20 28 20 25Z" fill="#A26D46"/>
+  <path d="M12 35C12 32 14 30 17 30H33C36 30 38 32 38 35C38 38 36 40 33 40H17C14 40 12 38 12 35Z" fill="#F0F0F0"/>
+  <text x="25" y="45" text-anchor="middle" font-family="Baskerville, serif" font-size="8" fill="#F0F0F0">SANCTUS</text>
+</svg>
