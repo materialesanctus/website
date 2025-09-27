@@ -77,7 +77,7 @@ export default function MusicSection() {
           </div>
           
           {/* Merch */}
-          <div>
+          {/* <div>
             <h2 className="font-['Baskerville'] text-[40px] text-[#1B1C1C] mb-8">
               Merch
             </h2>
@@ -103,7 +103,7 @@ export default function MusicSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

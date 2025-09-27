@@ -5,27 +5,21 @@ export default function StorySection() {
       title: "Start of the sanctus story here",
       subtitle: "mission and all that",
       image: "/assets/hero-image-1.png",
-      position: "left",
-      maskWidth: "652px",
-      maskHeight: "398px"
+      position: "left"
     },
     {
       id: 2,
       title: "More about the group why",
       subtitle: "who where when because", 
       image: "/assets/hero-image-2.png",
-      position: "right",
-      maskWidth: "652px", 
-      maskHeight: "398px"
+      position: "right"
     },
     {
       id: 3,
       title: "Part three of the story come and see",
       subtitle: "and sing with us",
       image: "/assets/hero-image-3.png", 
-      position: "left",
-      maskWidth: "652px",
-      maskHeight: "398px"
+      position: "left"
     }
   ];
 
@@ -35,32 +29,18 @@ export default function StorySection() {
         <div key={story.id} className="relative h-[583px] flex items-center justify-center overflow-hidden">
           <div className="w-full max-w-[1440px] h-full relative flex items-center mx-auto">
             
-            {/* Story Image with proper masking like Figma */}
+            {/* Story Image - simplified approach */}
             <div 
-              className={`absolute h-[425px] opacity-90 overflow-hidden ${
+              className={`absolute h-[400px] opacity-63 overflow-hidden rounded-lg ${
                 story.position === "left" 
-                  ? "left-[-403px] w-[1055px]" 
-                  : story.id === 2 
-                    ? "left-[173px] w-[1062px]" 
-                    : "left-[-113px] w-[993px]"
+                  ? "left-0 w-[652px]" 
+                  : "right-0 w-[652px]"
               } top-1/2 transform -translate-y-1/2`}
             >
               <div 
                 className="w-full h-full bg-cover bg-center"
                 style={{ 
-                  backgroundImage: `url('${story.image}')`,
-                  maskImage: `url('${story.image}')`,
-                  maskRepeat: 'no-repeat',
-                  maskSize: `${story.maskWidth} ${story.maskHeight}`,
-                  maskPosition: story.position === "left" 
-                    ? (story.id === 1 ? '403px 0px' : '227px 2px')
-                    : '397px 10px',
-                  WebkitMaskImage: `url('${story.image}')`,
-                  WebkitMaskRepeat: 'no-repeat', 
-                  WebkitMaskSize: `${story.maskWidth} ${story.maskHeight}`,
-                  WebkitMaskPosition: story.position === "left"
-                    ? (story.id === 1 ? '403px 0px' : '227px 2px') 
-                    : '397px 10px'
+                  backgroundImage: `url('${story.image}')`
                 }}
               />
             </div>
