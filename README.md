@@ -1,4 +1,4 @@
-
+deploy
 
 # Sanctus Pro Deo Website
 
