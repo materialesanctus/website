@@ -19,9 +19,9 @@ export default function Home() {
       <StorySection />
       <ValuesSection />
       <DonateSection />
-      <VideoSection />
       <MusicSection />
-      <GetInvolvedSection />
+      <VideoSection />
+      {/* <GetInvolvedSection /> */}
       <PartnersSection />
       <Footer />
     </main>

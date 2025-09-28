@@ -79,9 +79,7 @@ export default function MusicSection() {
             Ultimele Lansări
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#A26D46] to-[#8B5A3A] mx-auto mb-8"></div>
-          <p className="text-[18px] md:text-[20px] text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Experimentează cea mai recentă călătorie spirituală prin muzică. Disponibil pe toate platformele de streaming majore.
-          </p>
+          
         </div>
 
         {/* Main Content - Single Row Layout */}

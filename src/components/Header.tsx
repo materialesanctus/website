@@ -24,11 +24,12 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex space-x-8 text-sm">
-              <li><a href="#about" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">About</a></li>
-              <li><a href="#videos" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Videos</a></li>
-              <li><a href="#music" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Music</a></li>
-              <li><a href="#partners" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Partners</a></li>
-              <li><a href="#donate" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Donate</a></li>
+              <li><a href="#concerts" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Concerte</a></li>
+              <li><a href="#about" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Despre</a></li>
+              <li><a href="#donate" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Donează</a></li>
+              <li><a href="#music" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Muzică</a></li>
+              <li><a href="#partners" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Sponsori</a></li>
+              {/* <li><a href="#videos" className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors font-['Poppins']">Videoclipuri</a></li> */}
             </ul>
           </nav>
           
@@ -72,40 +73,23 @@ export default function Header() {
               {/* Navigation Menu - Centered */}
               <nav className="flex-1 flex items-center justify-center">
                 <ul className="text-center space-y-7">
+                  {/* Menu Items */}
+                  <li>
+                    <a 
+                      href="#concerts" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Concerte
+                    </a>
+                  </li>                  
                   <li>
                     <a 
                       href="#about" 
                       className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="#videos" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Videos
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="#music" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Music
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="#partners" 
-                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Partners
+                      Despre
                     </a>
                   </li>
                   <li>
@@ -114,9 +98,37 @@ export default function Header() {
                       className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Donate
+                      Donează
                     </a>
                   </li>
+                  {/* <li>
+                    <a 
+                      href="#videos" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Videoclipuri
+                    </a>
+                  </li> */}
+                  <li>
+                    <a 
+                      href="#music" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Muzică
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="#partners" 
+                      className="text-[#F0F0F0] hover:text-[#A26D46] transition-colors text-[40px] leading-[60px] font-['Baskerville'] font-semibold block" 
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Sponsori
+                    </a>
+                  </li>
+                  
                 </ul>
               </nav>
               

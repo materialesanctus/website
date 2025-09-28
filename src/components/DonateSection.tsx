@@ -1,6 +1,6 @@
 export default function DonateSection() {
   return (
-    <section id="donate" className="bg-[#171718] py-16">
+    <section id="donate" className="bg-[#171718] py-10 pb-20">
       <div className="container mx-auto px-5 text-center">
         <h2 className="font-['Baskerville'] text-[60px] md:text-[80px] text-[#F0F0F0] mb-8">
           Donează

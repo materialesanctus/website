@@ -44,27 +44,13 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <ul className="space-y-2 text-[14px] text-[#F0F0F0]">
-                <li>hello@sanctusprodeo.com</li>
+                <li>contact@sanctusprodeo.com</li>
                 <li>0744 200 012</li>
                 <li>facebook instagram</li>
               </ul>
             </div>
             
-            <div>
-              <p className="font-['Poppins'] font-semibold text-[14px] tracking-[0.78px] uppercase text-[#F0F0F0] mb-4">
-                Stay In Touch
-              </p>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your Email"
-                  className="bg-transparent border-b border-[#F0F0F0] text-[#F0F0F0] placeholder-[#F0F0F0] placeholder-opacity-40 px-0 py-2 flex-1 focus:outline-none focus:border-[#A26D46]"
-                />
-                <button className="ml-4 font-['Poppins'] text-[12px] tracking-[1.8px] uppercase text-[#F0F0F0] hover:text-[#A26D46] transition-colors">
-                  Submit
-                </button>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
