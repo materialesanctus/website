@@ -76,104 +76,84 @@ export default function MusicSection() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h2 className="font-['Baskerville'] text-[48px] md:text-[56px] lg:text-[64px] text-[#1B1C1C] mb-6 leading-tight">
-            Latest Release
+            Ultimele Lansări
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#A26D46] to-[#8B5A3A] mx-auto mb-8"></div>
           <p className="text-[18px] md:text-[20px] text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Experience our newest spiritual journey through music. Available on all major streaming platforms.
+            Experimentează cea mai recentă călătorie spirituală prin muzică. Disponibil pe toate platformele de streaming majore.
           </p>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        {/* Main Content - Single Row Layout */}
+        <div className="p-8 lg:p-12">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
+            
+            {/* Left Side - Album Info */}
+            <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
+              {/* Album Text */}
+              <div className="text-center lg:text-left">
+                <h3 className="font-['Baskerville'] text-[32px] lg:text-[37px] text-[#1B1C1C] mb-4 leading-normal">
+                  EU SUNT
+                </h3>
+                <div className="max-w-[241px] mx-auto lg:mx-0">
+                  <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px]">
+                    Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
+                  </p>
+                </div>
+              </div>
 
-          {/* Left Column - Album Showcase */}
-          <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 relative overflow-hidden">
-              {/* Decorative background element */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#A26D46]/10 to-transparent rounded-full -mr-16 -mt-16"></div>
-
-              <div className="relative">
-                {/* Album Layout - Side by side on desktop, stacked on mobile */}
-                <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-8">
-                  {/* Left side - Title and Description */}
-                  <div className="flex-1 lg:order-1 text-center lg:text-left">
-                    <h3 className="font-['Baskerville'] text-[32px] lg:text-[37px] text-[#1B1C1C] mb-4 lg:mb-6 leading-normal">
-                      EU SUNT
-                    </h3>
-                    
-                    <div className="lg:max-w-[241px]">
-                      <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px] mb-6">
-                        Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Right side - Album Cover */}
-                  <div className="lg:order-2 flex justify-center lg:justify-end">
-                    <div className="w-[200px] lg:w-[212px] h-[200px] lg:h-[212px] relative group">
-                      <div className="w-full h-full overflow-hidden relative">
-                        <Image
-                          src="/assets/eu-sunt-album.jpg"
-                          alt="EU SUNT Album"
-                          width={212}
-                          height={212}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                            <svg width="16" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
+              {/* Album Cover */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="w-[200px] lg:w-[212px] h-[200px] lg:h-[212px] relative group flex-shrink-0">
+                  <Image
+                    src="/assets/eu-sunt-album.jpg"
+                    alt="EU SUNT Album"
+                    width={212}
+                    height={212}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                      <svg width="16" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
+                      </svg>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Column - Streaming Platforms */}
-          <div className="order-1 lg:order-2">
-            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 relative overflow-hidden">
-              {/* Decorative background element */}
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-[#A26D46]/5 to-transparent rounded-full -ml-20 -mb-20"></div>
-
-              <div className="relative">
-                <h3 className="font-['Poppins'] font-bold text-[24px] md:text-[28px] text-[#1B1C1C] mb-8 text-center lg:text-left">
-                  Stream Now
-                </h3>
-
-                <div className="space-y-4 mb-8">
-                  {musicPlatforms.map((platform, index) => (
-                    <div key={index} className="group">
-                      <div className="flex items-center justify-between bg-gradient-to-r from-[#FAFAFA] to-[#F5F5F5] hover:from-white hover:to-[#FAFAFA] rounded-2xl p-5 transition-all duration-300 hover:shadow-lg border border-gray-100 hover:border-[#A26D46]/20">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-shadow duration-300">
-                            {typeof platform.icon === 'string' ? (
-                              <span className="text-[18px]">{platform.icon}</span>
-                            ) : (
-                              <div className="scale-75">{platform.icon}</div>
-                            )}
-                          </div>
-                          <span className="text-[16px] md:text-[18px] text-[#1B1C1C] font-semibold">{platform.name}</span>
+            {/* Right Side - Streaming Platforms */}
+            <div className="flex-1 lg:ml-8">
+              <h4 className="font-['Poppins'] text-[18px] text-[#1B1C1C] mb-6 text-center lg:text-left">
+                Platforme
+              </h4>
+              
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                {musicPlatforms.map((platform, index) => (
+                  <div key={index} className="group">
+                    <div className="flex items-center justify-between bg-[#EEEEEE] hover:bg-[#E5E5E5] p-4 transition-all duration-300 border-b border-white/50 last:border-b-0">
+                      <div className="flex items-center gap-4">
+                        <div className="w-7 h-7 flex items-center justify-center flex-shrink-0">
+                          {typeof platform.icon === 'string' ? (
+                            <span className="text-[16px]">{platform.icon}</span>
+                          ) : (
+                            <div className="scale-[0.6]">{platform.icon}</div>
+                          )}
                         </div>
-                        <a 
-                          href={platform.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="border border-[#816550] text-[#816550] px-4 py-2 md:px-6 md:py-3 rounded-[21.5px] text-[10px] md:text-[10px] tracking-[1.5px] uppercase font-['Poppins'] font-normal hover:bg-[#816550] hover:text-white transition-all duration-300 inline-block text-center min-w-[70px] md:min-w-[80px]"
-                        >
-                          Ascultă
-                        </a>
+                        <span className="font-['Poppins'] text-[16px] text-[#1B1C1C] leading-[32px]">{platform.name}</span>
                       </div>
+                      <a 
+                        href={platform.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="border border-[#816550] text-[#816550] px-6 py-2 rounded-[21.5px] text-[10px] tracking-[1.5px] uppercase font-['Poppins'] font-normal hover:bg-[#816550] hover:text-white transition-all duration-300 inline-block text-center w-[98px] h-[33px] flex items-center justify-center"
+                      >
+                        Ascultă
+                      </a>
                     </div>
-                  ))}
-                </div>
-
-                
+                  </div>
+                ))}
               </div>
             </div>
           </div>
