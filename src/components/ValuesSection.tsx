@@ -1,7 +1,8 @@
 export default function ValuesSection() {
   const values = [
     {
-      title: "PASSION",
+      title: "200+",
+      desc: "CONCERTE",
       icon: (
         <svg width="68" height="90" viewBox="0 0 68 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="icon_Passion">
@@ -34,7 +35,8 @@ export default function ValuesSection() {
       )
     },
     {
-      title: "COMMUNITY", 
+      title: "80+",
+      desc: "MEMBRII",
       icon: (
         <svg width="67" height="79" viewBox="0 0 67 79" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="icon_Community">
@@ -62,7 +64,8 @@ export default function ValuesSection() {
       )
     },
     {
-      title: "GOSPEL",
+      title: "1",
+      desc: "SINGUR SCOP",
       icon: (
         <svg width="59" height="79" viewBox="0 0 59 79" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="icon_Gospel">
@@ -95,6 +98,9 @@ export default function ValuesSection() {
               </div>
               <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
                 {value.title}
+              </h3>
+              <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
+                {value.desc}
               </h3>
             </div>
           ))}

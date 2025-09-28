@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import ConcertsSection from "@/components/ConcertsSection";
 import StorySection from "@/components/StorySection";
 import ValuesSection from "@/components/ValuesSection";
 import VideoSection from "@/components/VideoSection";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#171718] text-[#F0F0F0]">
       <Header />
       <HeroSection />
+      <ConcertsSection />
       <StorySection />
       <ValuesSection />
       <DonateSection />
