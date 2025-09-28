@@ -94,35 +94,41 @@ export default function MusicSection() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#A26D46]/10 to-transparent rounded-full -mr-16 -mt-16"></div>
 
               <div className="relative">
-                <div className="w-full max-w-[280px] mx-auto mb-8">
-                  <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group">
-                    <Image
-                      src="/assets/che-cd.png"
-                      alt="Chemat la Lumina CD"
-                      width={280}
-                      height={280}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
-                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
-                        </svg>
-                      </div>
+                {/* Album Layout - Side by side on desktop, stacked on mobile */}
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-8">
+                  {/* Left side - Title and Description */}
+                  <div className="flex-1 lg:order-1 text-center lg:text-left">
+                    <h3 className="font-['Baskerville'] text-[32px] lg:text-[37px] text-[#1B1C1C] mb-4 lg:mb-6 leading-normal">
+                      EU SUNT
+                    </h3>
+                    
+                    <div className="lg:max-w-[241px]">
+                      <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px] mb-6">
+                        Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
+                      </p>
                     </div>
                   </div>
-                </div>
 
-                <div className="text-center">
-                  <h3 className="font-['Poppins'] font-bold text-[20px] md:text-[24px] text-[#1B1C1C] mb-3">
-                    Chemat la Lumina
-                  </h3>
-                  <p className="text-[18px] md:text-[20px] text-[#A26D46] font-semibold mb-6">€ 12.00</p>
-
-                  <div className="bg-gradient-to-r from-[#F8F8F8] to-[#F0F0F0] rounded-2xl p-6">
-                    <p className="text-[14px] md:text-[16px] text-[#666] leading-relaxed">
-                      A spiritual journey through contemporary Christian music, bringing hope and inspiration to believers worldwide.
-                    </p>
+                  {/* Right side - Album Cover */}
+                  <div className="lg:order-2 flex justify-center lg:justify-end">
+                    <div className="w-[200px] lg:w-[212px] h-[200px] lg:h-[212px] relative group">
+                      <div className="w-full h-full overflow-hidden relative">
+                        <Image
+                          src="/assets/eu-sunt-album.jpg"
+                          alt="EU SUNT Album"
+                          width={212}
+                          height={212}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                            <svg width="16" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -167,20 +173,7 @@ export default function MusicSection() {
                   ))}
                 </div>
 
-                {/* Call to Action */}
-                <div className="bg-gradient-to-r from-[#A26D46]/10 to-[#8B5A3A]/10 rounded-2xl p-6 border border-[#A26D46]/20">
-                  <h4 className="font-['Poppins'] font-semibold text-[18px] text-[#1B1C1C] mb-3">
-                    Follow Our Journey
-                  </h4>
-                  <p className="text-[14px] text-[#666] leading-relaxed mb-4">
-                    Stay connected for the latest releases, live performances, and spiritual content that inspires faith.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white rounded-full text-[12px] text-[#A26D46] font-medium border border-[#A26D46]/20">Music Streaming</span>
-                    <span className="px-3 py-1 bg-white rounded-full text-[12px] text-[#A26D46] font-medium border border-[#A26D46]/20">Live Performances</span>
-                    <span className="px-3 py-1 bg-white rounded-full text-[12px] text-[#A26D46] font-medium border border-[#A26D46]/20">Exclusive Content</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
