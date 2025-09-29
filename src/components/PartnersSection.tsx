@@ -28,6 +28,28 @@ export default function PartnersSection() {
       )
     },
     { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg" },
+    { 
+      name: "Your Space", 
+      logo: (
+        <svg width="200" height="80" viewBox="0 0 200 80" fill="none" opacity="0.6" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4"/>
+          <text x="100" y="45" textAnchor="middle" className="fill-[#A26D46] text-lg font-['Poppins'] font-medium">
+            YOUR SPACE
+          </text>
+        </svg>
+      )
+    },
+    { 
+      name: "Your Space", 
+      logo: (
+        <svg width="200" height="80" viewBox="0 0 200 80" fill="none" opacity="0.6" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4"/>
+          <text x="100" y="45" textAnchor="middle" className="fill-[#A26D46] text-lg font-['Poppins'] font-medium">
+            YOUR SPACE
+          </text>
+        </svg>
+      )
+    },
   ];
 
   return (
