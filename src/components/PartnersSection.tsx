@@ -2,14 +2,22 @@ import Image from "next/image";
 
 export default function PartnersSection() {
   const sponsors = [
-    { name: "Sponsor 1", logo: "/assets/sponsor-logo-1.svg" },
-    { name: "Sponsor 2", logo: "/assets/sponsor-logo-ignite.png" },
-    { name: "Sponsor 3", logo: "/assets/sponsor-logo-3.png" },
-    { name: "Sponsor 4", logo: "/assets/sponsor-logo-5.png" },
+    { name: "Lin Partner", logo: "/assets/lin-partner-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/atelier-september.png" },
+    { name: "Sponsor 1", logo: "/assets/dacobi-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/hokman-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/ignite-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/pe-foc-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/iso-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/help-ship-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/ev-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/lumos-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/construct-logo.png" },
+    { name: "Sponsor 1", logo: "/assets/guava-logo.png" },
     {
       name: "Mojar.ai",
       logo: (
-        <svg width="186" height="65" viewBox="0 0 186 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="186" height="65" viewBox="0 0 186 65" fill="none" opacity="0.6" xmlns="http://www.w3.org/2000/svg">
           <path d="M41.7378 25.1307L26.8385 10.2162C25.6225 9.00025 23.9772 8.32007 22.2597 8.32007L7.85054 8.33147C6.95757 8.33147 6.23559 9.05344 6.23559 9.94641V12.9369C6.23559 13.8299 5.51362 14.5519 4.62065 14.5519H1.61495C0.721976 14.5519 0 15.2776 0 16.1706V44.1149C0 45.0078 0.721976 45.7298 1.61495 45.7298H4.62065C5.51362 45.7298 6.23559 46.4518 6.23559 47.3448V50.3505C6.23559 51.2434 6.95757 51.9654 7.85054 51.9654H35.7872C36.6802 51.9654 37.4022 51.2434 37.4022 50.3505V47.3448C37.4022 46.4518 38.1241 45.7298 39.0171 45.7298H42.0114C42.9044 45.7298 43.6264 45.0078 43.6264 44.1149V29.6981C43.6264 27.9844 42.9462 26.3429 41.734 25.1307H41.7378ZM37.0108 29.0332V43.7197C37.0108 44.6126 36.2888 45.3346 35.3958 45.3346H8.24573C7.35276 45.3346 6.63078 44.6126 6.63078 43.7197V16.562C6.63078 15.669 7.35276 14.947 8.24573 14.947H22.9322C23.8252 14.947 24.5472 15.669 24.5472 16.562V25.7995C24.5472 26.6924 25.2692 27.4144 26.1621 27.4144H35.392C36.285 27.4144 37.007 28.1364 37.007 29.0294L37.0108 29.0332Z" fill="#888888" />
           <path d="M129.815 18.9824V50.377C129.815 50.8254 129.45 51.1863 129.006 51.1863H118.86V56.32H129.344C132.874 56.32 135.739 53.4587 135.739 49.9248V18.9824H129.819H129.815Z" fill="#555555" />
           <path d="M185.81 24.8229H179.639C177.576 24.8229 175.904 26.4949 175.904 28.5582V46.182H169.968V27.5284C169.968 22.7634 173.833 18.8989 178.598 18.8989H185.81V24.8191V24.8229Z" fill="#555555" />
@@ -19,7 +27,7 @@ export default function PartnersSection() {
         </svg>
       )
     },
-    { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg" }
+    { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg" },
   ];
 
   return (
@@ -31,7 +39,7 @@ export default function PartnersSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-7xl mx-auto mb-16">
           {sponsors.map((sponsor, index) => (
-            <div key={index} className="opacity-30 mix-blend-darken hover:opacity-60 transition-opacity">
+            <div key={index} className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity">
               {typeof sponsor.logo === 'string' ? (
                 <Image
                   src={sponsor.logo}
