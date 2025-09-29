@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import { FadeInSection, ScaleAnimation, StaggeredAnimation, StaggerItem } from './animations';
 
 export default function PartnersSection() {
   const sponsors = [
@@ -28,22 +31,22 @@ export default function PartnersSection() {
       )
     },
     { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg" },
-    { 
-      name: "Your Space", 
+    {
+      name: "Your Space",
       logo: (
         <svg width="200" height="80" viewBox="0 0 200 80" fill="none" opacity="0.6" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4"/>
+          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4" />
           <text x="100" y="45" textAnchor="middle" className="fill-[#A26D46] text-lg font-['Poppins'] font-medium">
             YOUR SPACE
           </text>
         </svg>
       )
     },
-    { 
-      name: "Your Space", 
+    {
+      name: "Your Space",
       logo: (
         <svg width="200" height="80" viewBox="0 0 200 80" fill="none" opacity="0.6" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4"/>
+          <rect x="10" y="20" width="180" height="40" rx="8" fill="none" stroke="#A26D46" strokeWidth="2" strokeDasharray="8,4" />
           <text x="100" y="45" textAnchor="middle" className="fill-[#A26D46] text-lg font-['Poppins'] font-medium">
             YOUR SPACE
           </text>
@@ -55,29 +58,40 @@ export default function PartnersSection() {
   return (
     <section id="partners" className="bg-[#EAE8E6] py-16">
       <div className="container mx-auto px-5">
-        <h2 className="font-['Baskerville'] text-[60px] md:text-[80px] text-[#A26D46] text-center mb-16">
-          Sponsors & Partners
-        </h2>
+        <FadeInSection>
+          <h2 className="font-['Baskerville'] text-[60px] md:text-[80px] text-[#A26D46] text-center mb-16">
+            Sponsors & Partners
+          </h2>
+        </FadeInSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-7xl mx-auto mb-16">
+        <StaggeredAnimation
+          className="grid grid-cols-2 md:grid-cols-4 px-5 gap-12 md:gap-12 items-center justify-items-center max-w-7xl mx-auto mb-16"
+          staggerDelay={0.1}
+        >
           {sponsors.map((sponsor, index) => (
-            <div key={index} className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity">
-              {typeof sponsor.logo === 'string' ? (
-                <Image
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  width={200}
-                  height={120}
-                  className="max-w-[200px] max-h-[120px] object-contain"
-                />
-              ) : (
-                <div className="max-w-[200px] max-h-[120px] flex items-center justify-center">
-                  {sponsor.logo}
-                </div>
-              )}
-            </div>
+            <StaggerItem key={index}>
+              <ScaleAnimation
+                className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity"
+                hoverScale={1.1}
+              >
+                {typeof sponsor.logo === 'string' ? (
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    width={200}
+                    height={120}
+                    className="max-w-[200px] max-h-[120px] object-contain"
+                  />
+                ) : (
+                  <div className="max-w-[200px] max-h-[120px] flex items-center justify-center">
+                    {sponsor.logo}
+                  </div>
+                )}
+              </ScaleAnimation>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggeredAnimation>
+
 
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-12 text-center md:text-left">
           <div className="mb-8 md:mb-0">
@@ -97,6 +111,7 @@ export default function PartnersSection() {
             </p>
           </div>
         </div>
+
       </div>
     </section>
   );

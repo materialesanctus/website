@@ -1,3 +1,7 @@
+'use client';
+
+import { FadeInSection, SlideInSection, StaggeredAnimation, StaggerItem, ScaleAnimation } from './animations';
+
 export default function ConcertsSection() {
   const concerts = [
     {
@@ -53,17 +57,20 @@ export default function ConcertsSection() {
       
       <div className="container mx-auto px-4 lg:px-5 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-12 lg:mb-16">
+        <FadeInSection className="text-center mb-12 lg:mb-16">
           <h2 className="font-['Baskerville'] text-[36px] md:text-[48px] lg:text-[60px] text-[#F0F0F0] mb-4 px-4">
             Concerte
           </h2>
-          
-        </div>
+        </FadeInSection>
 
         {/* Concert Listings */}
-        <div className="space-y-8 lg:space-y-7 max-w-6xl mx-auto">
+        <StaggeredAnimation 
+          className="space-y-8 lg:space-y-7 max-w-6xl mx-auto"
+          staggerDelay={0.2}
+        >
           {concerts.map((concert, index) => (
-            <div key={concert.id} className="relative">
+            <StaggerItem key={concert.id}>
+              <div className="relative">
               {/* Mobile Card Layout */}
               <div className="lg:hidden">
                 {/* City Tag */}
@@ -174,8 +181,9 @@ export default function ConcertsSection() {
                 </div>
               </div>
             </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggeredAnimation>
 
         {/* Disclaimer */}
         <div className="border-t border-white/50 pt-4 mt-8 max-w-6xl mx-auto px-4 lg:px-0">

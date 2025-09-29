@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import { FadeInSection, SlideInSection, ScaleAnimation, StaggeredAnimation, StaggerItem } from './animations';
 
 export default function MusicSection() {
   const musicPlatforms = [
@@ -74,62 +77,65 @@ export default function MusicSection() {
       <div className="container mx-auto px-5 max-w-7xl">
 
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <FadeInSection className="text-center mb-16">
           <h2 className="font-['Baskerville'] text-[48px] md:text-[56px] lg:text-[64px] text-[#1B1C1C] mb-6 leading-tight">
             Ultimele Lansări
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#A26D46] to-[#8B5A3A] mx-auto mb-8"></div>
-          
-        </div>
+        </FadeInSection>
 
         {/* Main Content - Single Row Layout */}
         <div className="p-8 lg:p-12">
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
             
             {/* Left Side - Album Info */}
-            <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
+            <StaggeredAnimation className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
               {/* Album Text */}
-              <div className="text-center lg:text-left">
-                <h3 className="font-['Baskerville'] text-[32px] lg:text-[37px] text-[#1B1C1C] mb-4 leading-normal">
-                  EU SUNT
-                </h3>
-                <div className="max-w-[241px] mx-auto lg:mx-0">
-                  <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px]">
-                    Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
-                  </p>
-                </div>
-              </div>
+              <StaggerItem>
+                <SlideInSection direction="left" className="text-center lg:text-left">
+                  <h3 className="font-['Baskerville'] text-[32px] lg:text-[37px] text-[#1B1C1C] mb-4 leading-normal">
+                    EU SUNT
+                  </h3>
+                  <div className="max-w-[241px] mx-auto lg:mx-0">
+                    <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px]">
+                      Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
+                    </p>
+                  </div>
+                </SlideInSection>
+              </StaggerItem>
 
               {/* Album Cover */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-[200px] lg:w-[212px] h-[200px] lg:h-[212px] relative group flex-shrink-0">
-                  <Image
-                    src="/assets/eu-sunt-album.jpg"
-                    alt="EU SUNT Album"
-                    width={212}
-                    height={212}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                      <svg width="16" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
-                      </svg>
+              <StaggerItem>
+                <ScaleAnimation className="flex justify-center lg:justify-start" hoverScale={1.1}>
+                  <div className="w-[200px] lg:w-[212px] h-[200px] lg:h-[212px] relative group flex-shrink-0">
+                    <Image
+                      src="/assets/eu-sunt-album.jpg"
+                      alt="EU SUNT Album"
+                      width={212}
+                      height={212}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                        <svg width="16" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 12L0 24V0L20 12Z" fill="#A26D46" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </ScaleAnimation>
+              </StaggerItem>
+            </StaggeredAnimation>
 
             {/* Right Side - Streaming Platforms */}
-            <div className="flex-1 lg:ml-8">
+            <SlideInSection direction="right" className="flex-1 lg:ml-8">
               <h4 className="font-['Poppins'] text-[18px] text-[#1B1C1C] mb-6 text-center lg:text-left">
                 Platforme
               </h4>
               
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+              <StaggeredAnimation className="bg-white rounded-2xl overflow-hidden shadow-sm" staggerDelay={0.15}>
                 {musicPlatforms.map((platform, index) => (
-                  <div key={index} className="group">
+                  <StaggerItem key={index} className="group">
                     <div className="flex items-center justify-between bg-[#EEEEEE] hover:bg-[#E5E5E5] p-4 transition-all duration-300 border-b border-white/50 last:border-b-0">
                       <div className="flex items-center gap-4">
                         <div className="w-7 h-7 flex items-center justify-center flex-shrink-0">
@@ -150,10 +156,10 @@ export default function MusicSection() {
                         Ascultă
                       </a>
                     </div>
-                  </div>
+                  </StaggerItem>
                 ))}
-              </div>
-            </div>
+              </StaggeredAnimation>
+            </SlideInSection>
           </div>
         </div>
       </div>

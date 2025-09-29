@@ -1,3 +1,7 @@
+'use client';
+
+import { FadeInSection, SlideInSection, StaggeredAnimation, StaggerItem } from './animations';
+
 export default function ValuesSection() {
   const values = [
     {
@@ -90,21 +94,26 @@ export default function ValuesSection() {
   return (
     <section className="bg-[#171718] py-16">
       <div className="container mx-auto px-5">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+        <StaggeredAnimation 
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto"
+          staggerDelay={0.2}
+        >
           {values.map((value, index) => (
-            <div key={index} className="text-center">
-              <div className="mb-6 flex justify-center">
-                {value.icon}
-              </div>
-              <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
-                {value.title}
-              </h3>
-              <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
-                {value.desc}
-              </h3>
-            </div>
+            <StaggerItem key={index}>
+              <FadeInSection className="text-center">
+                <div className="mb-6 flex justify-center">
+                  {value.icon}
+                </div>
+                <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
+                  {value.title}
+                </h3>
+                <h3 className="font-['Poppins'] font-semibold text-xs tracking-[1px] uppercase text-[#F0F0F0] opacity-40">
+                  {value.desc}
+                </h3>
+              </FadeInSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggeredAnimation>
       </div>
     </section>
   );

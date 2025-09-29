@@ -6,19 +6,32 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#171718]">
       <div className="container mx-auto px-5 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="logo">
-            <Image 
-              src="/assets/logo-sanctus-full.svg" 
-              alt="Sanctus Pro Deo" 
-              width={200} 
-              height={40}
-              className="h-8 w-auto"
-            />
+            <button 
+              onClick={handleScrollToTop}
+              className="cursor-pointer hover:opacity-80 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-[#A26D46] focus:ring-opacity-50 rounded"
+              aria-label="Go to top of page"
+            >
+              <Image 
+                src="/assets/logo-sanctus-full.svg" 
+                alt="Sanctus Pro Deo" 
+                width={200} 
+                height={40}
+                className="h-8 w-auto"
+              />
+            </button>
           </div>
           
           {/* Desktop Navigation */}
@@ -54,13 +67,22 @@ export default function Header() {
             <div className="relative flex flex-col h-full" style={{ height: '100dvh' }}>
               {/* Header with Logo and Close Button */}
               <div className="flex justify-between items-center p-5 pt-8">
-                <Image 
-                  src="/assets/logo-sanctus-full.svg" 
-                  alt="Sanctus Pro Deo" 
-                  width={205} 
-                  height={33}
-                  className="h-8 w-auto ml-8"
-                />
+                <button 
+                  onClick={() => {
+                    handleScrollToTop();
+                    setIsMenuOpen(false);
+                  }}
+                  className="cursor-pointer hover:opacity-80 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-[#A26D46] focus:ring-opacity-50 rounded ml-8"
+                  aria-label="Go to top of page"
+                >
+                  <Image 
+                    src="/assets/logo-sanctus-full.svg" 
+                    alt="Sanctus Pro Deo" 
+                    width={205} 
+                    height={33}
+                    className="h-8 w-auto"
+                  />
+                </button>
                 <button 
                   onClick={() => setIsMenuOpen(false)}
                   className="text-[#F0F0F0] text-2xl font-light hover:text-[#A26D46] transition-colors mr-4"
