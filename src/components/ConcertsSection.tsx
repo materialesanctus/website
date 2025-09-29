@@ -66,7 +66,8 @@ export default function ConcertsSection() {
         {/* Concert Listings */}
         <StaggeredAnimation 
           className="space-y-8 lg:space-y-7 max-w-6xl mx-auto"
-          staggerDelay={0.2}
+          staggerDelay={0.4}
+          childDelay={0.3}
         >
           {concerts.map((concert, index) => (
             <StaggerItem key={concert.id}>

@@ -73,7 +73,7 @@ export default function MusicSection() {
   ];
 
   return (
-    <section id="music" className="bg-gradient-to-br from-[#F7F7F7] to-[#EFEFEF] py-20">
+    <section id="music" className="bg-gradient-to-br from-[#F7F7F7] to-[#EFEFEF] py-20 overflow-hidden">
       <div className="container mx-auto px-5 max-w-7xl">
 
         {/* Hero Section */}
@@ -133,9 +133,14 @@ export default function MusicSection() {
                 Platforme
               </h4>
               
-              <StaggeredAnimation className="bg-white rounded-2xl overflow-hidden shadow-sm" staggerDelay={0.15}>
+              <FadeInSection className="bg-white rounded-2xl overflow-hidden shadow-sm">
                 {musicPlatforms.map((platform, index) => (
-                  <StaggerItem key={index} className="group">
+                  <ScaleAnimation 
+                    key={index} 
+                    className="group"
+                    delay={index * 0.2}
+                    hoverScale={1.02}
+                  >
                     <div className="flex items-center justify-between bg-[#EEEEEE] hover:bg-[#E5E5E5] p-4 transition-all duration-300 border-b border-white/50 last:border-b-0">
                       <div className="flex items-center gap-4">
                         <div className="w-7 h-7 flex items-center justify-center flex-shrink-0">
@@ -156,9 +161,9 @@ export default function MusicSection() {
                         Ascultă
                       </a>
                     </div>
-                  </StaggerItem>
+                  </ScaleAnimation>
                 ))}
-              </StaggeredAnimation>
+              </FadeInSection>
             </SlideInSection>
           </div>
         </div>
