@@ -102,7 +102,7 @@ export default function HeroSection() {
       >
         <motion.button
           onClick={handleScrollToNext}
-          className="cursor-pointer group focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-lg transition-all duration-300 flex items-center justify-center"
+          className="cursor-pointer group focus:outline-none focus:ring-2 p-2 focus:ring-white focus:ring-opacity-50 rounded-lg transition-all duration-300 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}

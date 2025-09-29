@@ -87,7 +87,7 @@ export default function MusicSection() {
         {/* Main Content - Single Row Layout */}
         <div className="p-8 lg:p-12">
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
-            
+
             {/* Left Side - Album Info */}
             <StaggeredAnimation className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
               {/* Album Text */}
@@ -132,14 +132,12 @@ export default function MusicSection() {
               <h4 className="font-['Poppins'] text-[18px] text-[#1B1C1C] mb-6 text-center lg:text-left">
                 Platforme
               </h4>
-              
+
               <FadeInSection className="bg-white rounded-2xl overflow-hidden shadow-sm">
                 {musicPlatforms.map((platform, index) => (
-                  <ScaleAnimation 
-                    key={index} 
+                  <div
+                    key={index}
                     className="group"
-                    delay={index * 0.2}
-                    hoverScale={1.02}
                   >
                     <div className="flex items-center justify-between bg-[#EEEEEE] hover:bg-[#E5E5E5] p-4 transition-all duration-300 border-b border-white/50 last:border-b-0">
                       <div className="flex items-center gap-4">
@@ -152,16 +150,16 @@ export default function MusicSection() {
                         </div>
                         <span className="font-['Poppins'] text-[16px] text-[#1B1C1C] leading-[32px]">{platform.name}</span>
                       </div>
-                      <a 
-                        href={platform.url} 
-                        target="_blank" 
+                      <a
+                        href={platform.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="border border-[#816550] text-[#816550] px-6 py-2 rounded-[21.5px] text-[10px] tracking-[1.5px] uppercase font-['Poppins'] font-normal hover:bg-[#816550] hover:text-white transition-all duration-300 inline-block text-center w-[98px] h-[33px] flex items-center justify-center"
                       >
                         Ascultă
                       </a>
                     </div>
-                  </ScaleAnimation>
+                  </div>
                 ))}
               </FadeInSection>
             </SlideInSection>
