@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[861px] flex items-center justify-center overflow-hidden bg-[#171718]">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#171718]">
       {/* Background with blur effect */}
       <div className="absolute inset-0">
         <div 
