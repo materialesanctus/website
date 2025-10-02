@@ -65,13 +65,13 @@ export default function PartnersSection() {
         </FadeInSection>
 
         <StaggeredAnimation
-          className="grid grid-cols-2 md:grid-cols-4 px-5 gap-12 md:gap-12 items-center justify-items-center max-w-7xl mx-auto mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 items-center justify-items-center max-w-7xl mx-auto mb-16"
           staggerDelay={0.1}
         >
           {sponsors.map((sponsor, index) => (
             <StaggerItem key={index}>
               <ScaleAnimation
-                className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity"
+                className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity w-full flex items-center justify-center"
                 hoverScale={1.1}
               >
                 {typeof sponsor.logo === 'string' ? (
@@ -80,11 +80,13 @@ export default function PartnersSection() {
                     alt={sponsor.name}
                     width={200}
                     height={120}
-                    className="max-w-[200px] max-h-[120px] object-contain"
+                    className="w-full max-w-[120px] md:max-w-[200px] h-auto max-h-[80px] md:max-h-[120px] object-contain"
                   />
                 ) : (
-                  <div className="max-w-[200px] max-h-[120px] flex items-center justify-center">
-                    {sponsor.logo}
+                  <div className="w-full max-w-[120px] md:max-w-[200px] max-h-[80px] md:max-h-[120px] flex items-center justify-center">
+                    <div className="scale-[0.6] md:scale-100">
+                      {sponsor.logo}
+                    </div>
                   </div>
                 )}
               </ScaleAnimation>
