@@ -43,7 +43,7 @@ export default function ConcertsSection() {
   ];
 
   return (
-    <section id="concerts" className="bg-[#171718] py-20 relative">
+    <section id="concerts" className="bg-[#171718] pt-8 pb-20 relative">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div 
