@@ -11,17 +11,17 @@ export default function ConcertsSection() {
       address: "Strada Emil Cioran 1A",
       time: "17:30",
       city: "SIBIU",
-      link: "https://example.com/rezerva-sibiu-1730"
+      link: "https://www.evticket.ro/eveniment/concert-de-craciun-sibiu-17-30"
     },
-    {
-      id: 2,
-      date: "SÂMBĂTĂ, 6 Dec 2025", 
-      venue: "Centrul Cultural \"Ion Besoiu\"",
-      address: "Strada Emil Cioran 1A",
-      time: "20:30",
-      city: "SIBIU",
-      link: "https://example.com/rezerva-sibiu-2030"
-    },
+    // {
+    //   id: 2,
+    //   date: "SÂMBĂTĂ, 6 Dec 2025", 
+    //   venue: "Centrul Cultural \"Ion Besoiu\"",
+    //   address: "Strada Emil Cioran 1A",
+    //   time: "20:30",
+    //   city: "SIBIU",
+    //   link: "https://example.com/rezerva-sibiu-2030"
+    // },
     {
       id: 3,
       date: "Luni, 8 Dec 2023",
@@ -29,7 +29,7 @@ export default function ConcertsSection() {
       address: "Piața Lucian Blaga 1-3",
       time: "17:30",
       city: "BUCUREȘTI",
-      link: "https://example.com/rezerva-bucuresti-1730"
+      link: "https://www.evticket.ro/eveniment/concert-de-craciun-bucuresti-525"
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ export default function ConcertsSection() {
       address: "Piața Lucian Blaga 1-3", 
       time: "20:30",
       city: "BUCUREȘTI",
-      link: "https://example.com/rezerva-bucuresti-2030"
+      link: "https://www.evticket.ro/eveniment/concert-de-craciun-bucuresti-529"
     }
   ];
 
