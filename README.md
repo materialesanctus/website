@@ -1,4 +1,4 @@
-deploy11 cu ai
+deploy12
 
 # Sanctus Pro Deo Website
 
