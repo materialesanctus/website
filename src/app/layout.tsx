@@ -10,8 +10,28 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sanctus Pro Deo - Christian Music Group",
-  description: "Sanctus Pro Deo is a Christian music group sharing the message of salvation through music and worship.",
+  title: "Sanctus Pro Deo - Concert Crăciun 2025",
+  description: "Sanctus Pro Deo vă invită la concertele de Crăciun: 6 decembrie la Sibiu și 8 decembrie la București.",
+  openGraph: {
+    title: "Sanctus Pro Deo - Concert Crăciun 2025",
+    description: "Concerte de Crăciun: 6 decembrie la Sibiu și 8 decembrie la București.",
+    images: [
+      {
+        url: "/assets/meta-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Concert Crăciun - Sanctus Pro Deo",
+      },
+    ],
+    locale: "ro_RO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sanctus Pro Deo - Concert Crăciun 2025",
+    description: "Concerte de Crăciun: 6 decembrie la Sibiu și 8 decembrie la bucurești.",
+    images: ["/assets/meta-image.jpg"],
+  },
 };
 
 export default function RootLayout({

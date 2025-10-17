@@ -35,7 +35,7 @@ export default function TempHeader() {
       {/* Desktop Image */}
       <div className="hidden md:block w-full">
         <Image 
-          src="/assets/craciun-desktop.jpg" 
+          src="/assets/craciun-desktop-v2.jpg" 
           alt="Crăciun - Sanctus Pro Deo" 
           width={1920}
           height={1080}
@@ -47,7 +47,7 @@ export default function TempHeader() {
       {/* Mobile Image */}
       <div className="block md:hidden w-full">
         <Image 
-          src="/assets/craciun-mobile.jpg" 
+          src="/assets/craciun-mobile-v2.jpg" 
           alt="Crăciun - Sanctus Pro Deo" 
           width={768}
           height={1024}
