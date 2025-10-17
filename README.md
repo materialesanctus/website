@@ -45,7 +45,17 @@ yarn install
 pnpm install
 ```
 
-3. Start the development server:
+3. Configure environment variables (optional):
+
+```bash
+# Copy the example environment file
+cp .env.example .env.local
+
+# Edit .env.local and add your Google Analytics Measurement ID
+# NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
@@ -56,6 +66,23 @@ pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Google Analytics Setup
+
+This website supports Google Analytics for tracking website visitors and usage. To enable it:
+
+1. Create a Google Analytics 4 property at [Google Analytics](https://analytics.google.com/)
+2. Get your Measurement ID (format: `G-XXXXXXXXXX`)
+3. Create a `.env.local` file in the root directory (or copy from `.env.example`)
+4. Add your Measurement ID:
+
+```env
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+5. Restart the development server
+
+The Google Analytics script will automatically be included in the website when the environment variable is set. If the variable is not set, the website will work normally without analytics tracking.
 
 ## Project Structure
 
