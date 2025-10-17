@@ -97,7 +97,7 @@ export default function MusicSection() {
                   </h3>
                   <div className="max-w-[241px] mx-auto lg:mx-0">
                     <p className="font-['Poppins'] text-[14px] text-[#1B1C1C] leading-[21px]">
-                      Albumul „Eu sunt" este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
+                      Albumul &bdquo;Eu sunt&rdquo; este acum disponibil pe toate platformele de streaming. Ascultă-l și distribuie-l celor dragi!
                     </p>
                   </div>
                 </div>
