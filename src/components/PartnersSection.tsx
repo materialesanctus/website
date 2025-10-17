@@ -30,7 +30,7 @@ export default function PartnersSection() {
         </svg>
       )
     },
-    { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg" },
+    { name: "Ergoliv.ro", logo: "/assets/ergoliv-logo_ro.svg", link: "https://ergoliv.ro" },
     {
       name: "Your Space",
       logo: (
@@ -74,20 +74,42 @@ export default function PartnersSection() {
                 className="opacity-90 mix-blend-darken hover:opacity-60 transition-opacity w-full flex items-center justify-center"
                 hoverScale={1.1}
               >
-                {typeof sponsor.logo === 'string' ? (
-                  <Image
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    width={200}
-                    height={120}
-                    className="w-full max-w-[120px] md:max-w-[200px] h-auto max-h-[80px] md:max-h-[120px] object-contain"
-                  />
+                {sponsor.link ? (
+                  <a href={sponsor.link} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center">
+                    {typeof sponsor.logo === 'string' ? (
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={200}
+                        height={120}
+                        className="w-full max-w-[120px] md:max-w-[200px] h-auto max-h-[80px] md:max-h-[120px] object-contain"
+                      />
+                    ) : (
+                      <div className="w-full max-w-[120px] md:max-w-[200px] max-h-[80px] md:max-h-[120px] flex items-center justify-center">
+                        <div className="scale-[0.6] md:scale-100">
+                          {sponsor.logo}
+                        </div>
+                      </div>
+                    )}
+                  </a>
                 ) : (
-                  <div className="w-full max-w-[120px] md:max-w-[200px] max-h-[80px] md:max-h-[120px] flex items-center justify-center">
-                    <div className="scale-[0.6] md:scale-100">
-                      {sponsor.logo}
-                    </div>
-                  </div>
+                  <>
+                    {typeof sponsor.logo === 'string' ? (
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={200}
+                        height={120}
+                        className="w-full max-w-[120px] md:max-w-[200px] h-auto max-h-[80px] md:max-h-[120px] object-contain"
+                      />
+                    ) : (
+                      <div className="w-full max-w-[120px] md:max-w-[200px] max-h-[80px] md:max-h-[120px] flex items-center justify-center">
+                        <div className="scale-[0.6] md:scale-100">
+                          {sponsor.logo}
+                        </div>
+                      </div>
+                    )}
+                  </>
                 )}
               </ScaleAnimation>
             </StaggerItem>
