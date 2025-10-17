@@ -9,12 +9,14 @@ import GetInvolvedSection from "@/components/GetInvolvedSection";
 import DonateSection from "@/components/DonateSection";
 import PartnersSection from "@/components/PartnersSection";
 import Footer from "@/components/Footer";
+import TempHeader from "@/components/TempHeader";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#171718] text-[#F0F0F0]">
       <Header />
-      <HeroSection />
+      <TempHeader />
+      {/* <HeroSection /> */}
       <ConcertsSection />
       <StorySection />
       <ValuesSection />
