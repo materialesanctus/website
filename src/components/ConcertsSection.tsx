@@ -24,7 +24,7 @@ export default function ConcertsSection() {
     // },
     {
       id: 3,
-      date: "Luni, 8 Dec 2023",
+      date: "Luni, 8 Dec 2025",
       venue: "Teatrul Național de Operetă și Musical \"Ion Dacian\"",
       address: "Piața Lucian Blaga 1-3",
       time: "17:30",
@@ -33,7 +33,7 @@ export default function ConcertsSection() {
     },
     {
       id: 4,
-      date: "Luni, 8 Dec 2023",
+      date: "Luni, 8 Dec 2025",
       venue: "Teatrul Național de Operetă și Musical \"Ion Dacian\"",
       address: "Piața Lucian Blaga 1-3", 
       time: "20:30",

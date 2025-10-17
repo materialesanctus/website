@@ -36,7 +36,7 @@ export default function StorySection() {
             <div className="w-full lg:w-[652px] h-[240px] lg:h-[398px] lg:ml-auto opacity-83 overflow-hidden">
               <div
                 className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url('/assets/story-image-2.jpg')` }}
+                style={{ backgroundImage: `url('/assets/story-image-2-v2.jpg')` }}
               />
             </div>
           </div>
