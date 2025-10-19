@@ -20,7 +20,7 @@ export default function DonateSection() {
         
         <ScaleAnimation delay={0.4} hoverScale={1.1}>
           <a 
-            href="https://buy.stripe.com/dRm00i1BHg0d3K5fgrbEA00" 
+            href="https://buy.stripe.com/8x2cN4cgleW90xTecnbEA01" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-[#A26D46] text-[#F0F0F0] px-12 py-4 rounded-full font-['Poppins'] text-[12px] tracking-[1.8px] uppercase hover:bg-[#8A5A39] transition-colors"
