@@ -13,15 +13,15 @@ export default function ConcertsSection() {
       city: "SIBIU",
       link: "https://www.evticket.ro/eveniment/concert-de-craciun-sibiu-17-30"
     },
-    // {
-    //   id: 2,
-    //   date: "SÂMBĂTĂ, 6 Dec 2025", 
-    //   venue: "Centrul Cultural \"Ion Besoiu\"",
-    //   address: "Strada Emil Cioran 1A",
-    //   time: "20:30",
-    //   city: "SIBIU",
-    //   link: "https://example.com/rezerva-sibiu-2030"
-    // },
+    {
+      id: 2,
+      date: "SÂMBĂTĂ, 6 Dec 2025", 
+      venue: "Centrul Cultural \"Ion Besoiu\"",
+      address: "Strada Emil Cioran 1A",
+      time: "20:30",
+      city: "SIBIU",
+      link: "https://www.evticket.ro/eveniment/concert-craciun-2025-20-30-sanctus-pro-deo"
+    },
     {
       id: 3,
       date: "Luni, 8 Dec 2025",
