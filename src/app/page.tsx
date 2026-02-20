@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#171718] text-[#F0F0F0]">
       <Header />
-      <TempHeader />
-      {/* <HeroSection /> */}
-      <ConcertsSection />
+      {/* <TempHeader /> */}
+      <HeroSection />
+      {/* <ConcertsSection /> */}
       <StorySection />
       <ValuesSection />
       <DonateSection />
